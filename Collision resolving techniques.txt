@@ -1,0 +1,79 @@
+Types of Collision Resolving Technique:
+
+1) Seperate Chaining (Closed Addressing) (Open Hashing):
+
+keys = { 11,35,21,91,25,40}
+Use Division Method:
+f(key) = key%m
+
+Let us Assume we have hashtable with length 10 i.e size of hashtable is 10 
+
+for entering the data from the keys 
+
+f(11) = 11 % 10 = 1
+
+We will insert 11 at first position also we will use linked List i.e. in Node so later if we face any situation like Collision we can add next data in node and later link the address
+
+Pros :
+Can inset unlimited data
+
+Cons :
+Memory Consumtion Problem
+
+2) Open Addressing :
+(Closed Hashing)
+
+(Probing measure time taken to insert the element)
+
+1) Linear Probing :
+
+1) Without Chaining :
+Here if Collision occuer then we will use formula :
+L(key , i) = (f(key) + 1 ) % m
+
+i = 0 to m-1
+
+Example :
+
+keys = {78,24,15,16,25}
+
+m = 10
+
+f(78) = 78 % 10 = 8
+f(24) = 24 % 10 = 4
+f(15) = 15 % 10 = 5
+f(16) = 16 % 10 = 6
+f(25) = 25 % 10 = 5 .............. (Collision Occurs)
+
+Now we will use new formula ,
+
+L(key , i) = (f(key) + i) % m
+
+key = 25
+i = 0
+
+L(25,0) = (f(25) + 0) % 10 = 5 .... Here 5th position is already reserved so cant use this position
+L(25,1) = (f(25) + 1) % 10 = 6 ..... Here 6th position is already reserved so cant use this position
+L(25,2) = (f(25) + 2) % 10 = 7 ...... no element is there in 7th position so we can insert 25 in 7th position
+
+(Probing for element 25 is 3)
+
+Total number of Comparsion = 1+1+1+1+13 = 7
+
+Average Cost = Total number of Comparsion / Total number of element in key = 7/5 = 0.7
+
+Order of element = - , - , - , 24 , 15 , 16 , 25 , 78 , - , -  
+
+2) With Chaining:
+
+1) Without Replacing
+
+
+
+2) With Replacing
+
+
+2) Quadratic Probing
+
+
+3) Double Probing

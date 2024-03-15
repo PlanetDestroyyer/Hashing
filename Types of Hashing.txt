@@ -1,0 +1,7 @@
+Type of Hashing:
+
+1) Open Hashing(CLose Addressing):
+Here we can Store unlimited data (till hard disk gets full)
+
+2) CLose Hashing(Open Addressing):
+Here we have Fixed size of Hash Table

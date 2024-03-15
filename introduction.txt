@@ -1,0 +1,14 @@
+Hashing is a Data Structure which has O(1) time complexity for retierval,insertion,deletion and updation of data.
+
+follwing concepts include in Hashing:
+1) Hash Table - It is a type of data Structure used to store the data.It is a concept like Array.
+(Hashing is a technique to store and retuve the data from hashtable)
+Here :
+m - size of hash Table
+slot/buckes - row
+keys - data which we want to insert 
+        example : keys = {12,23,3,43} 
+
+
+    
+

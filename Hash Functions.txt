@@ -1,0 +1,65 @@
+Function we used to store data into hashtable is known as Hash Function.
+
+1) Division Method
+
+f(key) = key%m 
+
+Example : 
+
+For inserting the follwing from keys  in hashtable we will use as follows : 
+f(12) = 12 % 10 = 2 ...................... (10 is size of hashtable)
+        Now we will insert 12 in second position
+f(10) = 11 % 10 = 1
+        Now we will insert 10 in first position
+f(40) = 44 % 10 = 4
+        Now we will insert 40 in 4th row 
+f(20) = 22 % 10 = 2 
+        Here , 2nd place is already reserved by 12 so we cant insert 20 into that
+        Now this situation is known as Collision
+
+2) MidSquare Method :
+
+f(key) = (key)^2
+
+Example :
+
+keys = {11,12,13,14,15}
+
+h(11) = 11 x 11 = 121
+h(12) = 12 x 12 = 144
+h(13) = 13 x 13 = 169
+h(14) = 14 x 14 = 196
+h(15) = 15 x 15 = 225
+
+Now we want to find the mid of position of the above number i.e for 121 its 2 if we want 2 digit address then we use 21 of 121 number thus we will insert at 21 position for 11
+
+For , 11 we will insert data at 21 position &
+      12 we will insert data at 44 position &
+      13 we will insert data at 69 position & 
+      14 we will insert data at 96 position &
+      15 we will insert data at 25 position .
+    
+3) Folding Method(Digit Folding Method):
+
+Example : 
+
+keys = { 113423 ,25433,4434,1343,4665}
+
+For inserting the data in keys we will do as follows ,
+
+Step 1)
+
+lets take number 113423 now we will divide this number into 2 equal parts ie 11,34,23
+
+Step 2) 
+
+Now we can perform any arthemtic operation on this numbers 
+
+for simple we will do addition 
+
+11 + 34 + 23 = 78
+
+Step 3) 
+As we got 78 we can insert that data at 78th position or at 8th position
+
+
